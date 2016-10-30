@@ -1,0 +1,72 @@
+/* Make the header shorter to bring the content higher */
+header .logo-img{
+	height: 40px;
+}
+header .header-nav{
+	margin-top: 10px;
+
+}
+
+/***************************** PROFILE PAGE *****************************/
+
+
+/* Make the h1 (which we've moved inside the profile-summary) smaller */
+.profile-summary h1{
+	margin: 0 0 5px 0;
+}
+
+/* Make the profile image bigger */
+.profile .profile-photo{
+	width: 400px;
+}
+.profile-photo .photo-frame-xlarge {
+	width: 400px;
+	height: 500px;
+}
+
+.profile-photo .photo-frame-xlarge .photo-frame-image{
+	width: 400px;
+}
+
+.profile-summary-item.profile-gallery-container{
+	clear: left;
+}
+
+/* Hide the right sidebar as it's mostly useless */
+.profile-right {
+	display: none !important;
+}
+
+
+/***************************** LISTINGS PAGE *****************************/
+
+/* Make the images twice as big */
+
+body .user-grid-medium .user-grid-item{
+	width:256px;
+	min-height: 320px;
+}
+
+.user-grid-item .photo-frame-medium{
+	width: 256px;
+	height: 320px;
+}
+
+.user-grid-item .photo-frame-medium .photo-frame-image{
+	width: 256px;
+}
+
+/* Add 'Hide' buttons to each listing */
+
+.photo-frame-action.soulcrusher-additional-action{
+	bottom: 37px;
+}
+
+/*
+
+Margins that we might want to alter or add onto the image sizes because we've reduced the number of images
+
+(max-width: 450px), (min-width: 750px)
+.user-grid-medium .user-grid-item{
+	margin-left: 35px;
+}
