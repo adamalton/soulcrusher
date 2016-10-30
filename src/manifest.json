@@ -4,7 +4,7 @@
 	"name": "Soul Crusher",
 	"short_name": "Soul Crusher",
 	"description": "Makes the Guardian Soulmates website less terrible.",
-	"version": "0.3",
+	"version": "0.0.1",
 
 	"icons": {
 		"16": "img/soulcrusher-16.png",
