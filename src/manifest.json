@@ -18,11 +18,7 @@
 	},
 
 	"permissions": [
-		"activeTab",
-		"declarativeContent",
-		"webNavigation",
-		"storage",
-		"<all_urls>"
+		"https://soulmates.theguardian.com/"
 	],
 
 	"content_scripts": [
