@@ -27,16 +27,6 @@ function makeProfileLinkOpenInNewTab($listing){
 	$listing.find("a").prop("target", "_blank");
 }
 
-function makeProfileLinkGoDirectlyToGallery($listing){
-	var $links = $listing.find("a");
-	$links.each(function(){
-		var $this = $(this);
-		var href = $this.prop("href");
-		if(/\/profile\/[a-f0-9]+$/.test(href)){
-			$this.prop("href", href + "/gallery#inline-gallery");
-		}
-	});
-}
 
 function addHideButtonToProfileListing($listing){
 	var html = '<span class="photo-frame-action button button-tertiary soulcrusher-additional-action" data-href="/ajax/hide/PROFILE_ID?_=TIMESTAMP">';
@@ -94,7 +84,6 @@ function pollForProfilesList(){
 			var $this = $(this);
 			swapInLargeListingImage($this);
 			makeProfileLinkOpenInNewTab($this);
-			makeProfileLinkGoDirectlyToGallery($this);
 			// For some reason we have to wait a moment before this works!
 			// The elements are there and we can inject stuff, but it gets removed
 			setTimeout(addHideButtonToProfileListing, 600, $this);
