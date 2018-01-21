@@ -62,16 +62,13 @@ function getProfileID($element){
 
 function additionalHideButtonClick(e){
 	// Click handler for the added 'Hide' buttons on the profile listings.
-	// Send off Ajax call to hide the profile, and then remove the profile from the listing.
+	// Send off Ajax call to hide the profile, and then grey out the profile in the listing.
 	var $this = $(this);
 	var url = $this.data("href").replace("TIMESTAMP", String((new Date()).getTime()));
 	$.get(url);
-	// Nicely remove the listing from the page.
-	// .slideUp() and .hide() don't animate very well on these elements, hence .animate() width.
+	// Nicely grey out the listing on the page.
 	var $item = $this.closest(".user-grid-item");
-	$item.animate({"width": "0"}, 200);
-	// Using .delay() only delays the animation queue, so .remove() must be delayed "manually"
-	setTimeout(function(){$item.remove();}, 200);
+	$item.animate({"opacity": "0.2"}, 200);
 	return false;
 }
 
